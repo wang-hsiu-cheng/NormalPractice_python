@@ -30,7 +30,7 @@ plt.ylim([-(amplitude + 0.5), amplitude + 0.5])
 # draw ideal line
 ideal_x = np.linspace(0, 10, 100)
 ideal_y = amplitude * np.sin(ideal_x)
-plt.plot(ideal_x, ideal_y, color = "blue", label = "ideal", lineWidth = 0.5)
+plt.plot(ideal_x, ideal_y, color = "blue", label = "ideal", linewidth = 0.5)
 plt.plot(0,0, color = 'C2', label = "EM Filter\nalpha = %s" % (alpha_EMF))
 plt.plot(0,0, color = 'C9', label = "One Euro Filter\nf_c_min = %s\nbeta = %s" % (f_c_min, beta))
 plt.legend(
@@ -74,9 +74,9 @@ for i in range(n):
     # plot point as time goes on
     plt.scatter(real_x, real_y, s = 5, c = 'r', label = "Fitting Curve", marker = 'o')
     if em_filter :
-        plt.plot(em_filter_x, em_filter_y, color = "C2", lineWidth = 1)
+        plt.plot(em_filter_x, em_filter_y, color = "C2", linewidth = 1)
     if oe_filter :
-        plt.plot(oe_filter_x, oe_filter_y, color = "C9", lineWidth = 1)
+        plt.plot(oe_filter_x, oe_filter_y, color = "C9", linewidth = 1)
     plt.ioff()
     plt.pause(0.005)
 plt.show()
